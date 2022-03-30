@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brace Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+
+                /* 'navbar navbar navbar navbar' */
+                'intro intro intro intro'
+                'aside section section section '
+                'footer footer footer footer';
+            grid-gap: 5px;
+        }
+
+        .items {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #intro {
+            grid-area: intro;
+            background-color: black;
+        
+        }
+
+        .intro h1 {
+            text-align: center;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+            background-color: black;
+
+        }
+
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            display: block;
+            color: white;
+            padding: 0px 10px;
+
+
+        }
+
+        #navbar ul li a:hover {
+            background-color: rgb(27, 24, 24);
+            transition: all 0.5s ease-in-out;
+            border-radius: 5px;
+            color: antiquewhite;
+        }
+
+
+
+        #section {
+            grid-area: section;
+            background-color: lightgrey;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        .anime {
+            border: none;
+            margin: 14px 14px;
+            width: fit-content;
+            height: 210px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: gray 3px 3px 3px;
+
+        }
+
+        .anime:hover {
+            transform: scale(.9);
+            transition: all .5s ease-out;
+
+
+        }
+
+        img {
+            width: fit-content;
+            height: 200px;
+            border-radius: 10px 10px 0px 0px;
+
+        }
+
+        h3 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: medium;
+            padding: 3px;
+            border-radius: 0 0 10px 10px;
+            margin-top: -4px;
+        }
+
+
+        #aside {
+            grid-area: aside;
+            background-color: antiquewhite;
+
+
+        }
+
+        .aside {
+            display: grid;
+        }
+
+        .list {
+
+            margin-top: 8px;
+            margin-left: 8px;
+            margin-right: 8px;
+
+
+        }
+
+        .list img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .list img:hover {
+            transform: scale(.9);
+            transition: all .5s ease-in;
+
+
+        }
+
+
+        #footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="navbar" id="navbar">
+         <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#section">Anime</a></li>
+                <li><a href="#intro">About Me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div> -->
+        <div class="intro" id="intro">
+            <h1>Hi, there I'm Komal </h1> 
+
+
+        </div>
+
+        <div class="section" id="section">
+            <div class="anime"><a href="https://animixplay.to/v1/boku-dake-ga-inai-machi-dub" target="_blank" rel="noopener noreferrer"><img src="/erase.jpg"
+                        alt=""></a>
+                <h3>Erased</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/kimi-no-na-wa" target="_blank" rel="noopener noreferrer"><img src="/yourname.jpg"
+                        alt=""></a>
+                <h3>Your Name</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/bleach" target="_blank" rel="noopener noreferrer"><img src="/Bleachanime.png"
+                        alt=""></a>
+                <h3>Bleach</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/kimi-no-suizou-wo-tabetai" target="_blank" rel="noopener noreferrer"><img
+                        src="/iwant to eat your pancres.jpg" alt=""></a>
+                <h3>Pancreas</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/one-piece-dub/ep793" target="_blank" rel="noopener noreferrer"><img src="/onecpiece.jpg"
+                        alt=""></a>
+                <h3>One Piece</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/fairy-tail" target="_blank" rel="noopener noreferrer"><img
+                        src="/MV5BMzZjNmRhNWQtNTAyYy00Yjk2LWE0NzUtMmYyNTU0YTE5NjJiXkEyXkFqcGdeQXVyNjI4OTE5OTM@._V1_.jpg"
+                        alt=""></a>
+                <h3>Fairy Tail</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/naruto" target="_blank" rel="noopener noreferrer"><img src="/naruto.jpg"
+                        alt=""></a>
+                <h3>Naruto</h3>
+            </div>
+            <div class="anime"><a href="https://4anime.gg/monster-37" target="_blank" rel="noopener noreferrer"><img
+                        src="/MV5BM2ZkYTAwMGMtOGEwOS00MzBjLTgxOGYtZTYwY2E1ZjMyZmY4XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg"
+                        alt=""></a>a><h3>Mosnter</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/ao-haru-ride" target="_blank" rel="noopener noreferrer"><img src="/ao haru.jpg"
+                        alt=""></a>
+                <h3>Ao Haru</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/shingeki-no-kyojin-chronicle-dub" target="_blank" rel="noopener noreferrer"><img src="/aot.jpg"
+                        alt=""></a>
+                <h3>Attack on Titans</h3>
+            </div>
+            <div class="anime"><a href="https://animixplay.to/v1/jujutsu-kaisen-tv" target="_blank" rel="noopener noreferrer"><img src="/109222.jpg"
+                        alt=""></a>
+                <h3>Jujutsu Kaisen</h3>
+            </div>
+            
+
+        </div>
+        <div class="aside" id="aside">
+
+            <div class="list"><a href="https://open.spotify.com/artist/6HaGTQPmzraVmaVxvz6EUc" target="_blank"
+                    rel="noopener noreferrer"><img src="/jungkook_main_18.webp" alt=""></a></div>
+            <div class="list"><a href="https://open.spotify.com/artist/3JsHnjpbhX4SnySpvpa9DK" target="_blank"
+                    rel="noopener noreferrer"><img src="/V.jpg" alt=""></a></div>
+            <div class="list"><a
+                    href="https://open.spotify.com/playlist/1MXVFPDTtAXYjqApQ8N1zk?si=PadxC--oThq9GSptbfr9fA&nd=1"
+                    target="_blank" rel="noopener noreferrer"><img src="/spotify-icon-marilyn-scott-0.png" alt=""></a>
+            </div>
+
+
+        </div>
+        <div class="items" id="footer">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
